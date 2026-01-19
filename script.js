@@ -29,3 +29,24 @@ function addCar(model, price, description, image) {
 cars.push({ model, price, description, image });
 localStorage.setItem("vipauto_cars", JSON.stringify(cars));
 }
+
+// Gestion du formulaire de demande d'offre
+function initFormHandler() {
+    const form = document.getElementById('formDemande');
+    if (form) {
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const messageElement = document.getElementById('messageConfirmation');
+            if (messageElement) {
+                messageElement.style.display = 'block';
+            }
+        });
+    }
+}
+
+// Exécuter quand le DOM est prêt
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initFormHandler);
+} else {
+    initFormHandler();
+}

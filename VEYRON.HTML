@@ -17,7 +17,7 @@
         <!-- NAVBAR -->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark-premium shadow-lg">
             <div class="container">
-                <a class="navbar-brand" href="#"><img src="logo2.png" alt="Logo VIPauto" class="img-fluid"
+                <a class="navbar-brand" href="index.html"><img src="logo2.png" alt="Logo VIPauto" class="img-fluid"
                         style="max-height: 80px;"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
                     <span class="navbar-toggler-icon"></span>
@@ -40,20 +40,20 @@
                     <div id="carousel991" class="carousel slide shadow-lg" data-bs-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img src="VEYRON/79ee1e2d-50fa-4e2c-a6bf-23f54dd7b78a_897a2b7b-55b9-47b7-8123-57064be8eb5a.webp"
-                                    class="d-block w-100" alt="Bugatti Veyron GrandSport 1">
+                                <img src="https://enzolb.github.io/VIPauto/VEYRON/1.webp" class="d-block w-100"
+                                    alt="Bugatti Veyron GrandSport 1">
                             </div>
                             <div class="carousel-item">
-                                <img src="VEYRON/79ee1e2d-50fa-4e2c-a6bf-23f54dd7b78a_f011f75f-0d89-437d-8d90-e3611dd40524.webp"
-                                    class="d-block w-100" alt="Bugatti Veyron GrandSport 2">
+                                <img src="https://enzolb.github.io/VIPauto/VEYRON/2.webp" class="d-block w-100"
+                                    alt="Bugatti Veyron GrandSport 2">
                             </div>
                             <div class="carousel-item">
-                                <img src="VEYRON/79ee1e2d-50fa-4e2c-a6bf-23f54dd7b78a_f243e8c4-8350-418f-b9c6-07984737651b.webp"
-                                    class="d-block w-100" alt="Bugatti Veyron GrandSport 3">
+                                <img src="https://enzolb.github.io/VIPauto/VEYRON/3.webp" class="d-block w-100"
+                                    alt="Bugatti Veyron GrandSport 3">
                             </div>
                             <div class="carousel-item">
-                                <img src="VEYRON/79ee1e2d-50fa-4e2c-a6bf-23f54dd7b78a_fe98b166-ca5f-4c61-a9b7-99871198302d.webp"
-                                    class="d-block w-100" alt="Bugatti Veyron GrandSport 4">
+                                <img src="https://enzolb.github.io/VIPauto/VEYRON/4.webp" class="d-block w-100"
+                                    alt="Bugatti Veyron GrandSport 4">
                             </div>
                         </div>
                         <button class="carousel-control-prev" type="button" data-bs-target="#carousel991"
@@ -84,7 +84,7 @@
                         <li>Entretien à jour, état exceptionnel, Passport Bugatti</li>
                     </ul>
                     </p>
-                    <form class="bg-dark p-4 rounded shadow-sm">
+                    <form class="bg-dark p-4 rounded shadow-sm" id="formDemande">
                         <h5 class="mb-3">Choisissez votre livraison :</h5>
                         <div class="form-check mb-2">
                             <input class="form-check-input" type="radio" name="livraison" id="domicile" checked>
@@ -99,6 +99,9 @@
                             </label>
                         </div>
                         <button type="submit" class="btn btn-gold w-100">Demander une offre</button>
+                        <div id="messageConfirmation" class="alert alert-success mt-3" role="alert" style="display: none;">
+                            Nos équipes vont prendre contact avec vous dans les plus brefs délais
+                        </div>
                     </form>
                 </div>
             </div>
@@ -111,6 +114,18 @@
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
         <script src="script.js"></script>
+        <script>
+            const form = document.getElementById('formDemande');
+            if (form) {
+                form.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    const messageElement = document.getElementById('messageConfirmation');
+                    if (messageElement) {
+                        messageElement.style.display = 'block';
+                    }
+                });
+            }
+        </script>
     </body>
 
 </html>
