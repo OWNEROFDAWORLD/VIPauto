@@ -30,7 +30,6 @@ cars.push({ model, price, description, image });
 localStorage.setItem("vipauto_cars", JSON.stringify(cars));
 }
 
-// Gestion du formulaire de demande d'offre
 function initFormHandler() {
     const form = document.getElementById('formDemande');
     if (form) {
@@ -44,7 +43,6 @@ function initFormHandler() {
     }
 }
 
-// Exécuter quand le DOM est prêt
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', initFormHandler);
 } else {
