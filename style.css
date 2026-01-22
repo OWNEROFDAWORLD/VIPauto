@@ -76,7 +76,6 @@ body {
   margin-top: 40px;
 }
 
-/* Styles responsive pour les images de services */
 .service img {
   max-width: 100%;
   height: auto;
@@ -92,4 +91,123 @@ body {
     max-width: 100%;
     margin-bottom: 20px;
   }
+}
+
+
+
+
+.avis-card {
+  background: rgba(0,0,0,0.25);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 18px;
+  padding: 18px 18px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+  color: #fff;
+}
+
+.avis-avatar {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  border: 2px solid rgba(255,255,255,0.18);
+  object-fit: cover;
+}
+
+.avis-name {
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.avis-car {
+  font-size: 0.92rem;
+}
+
+.avis-text {
+  color: rgba(255,255,255,0.88);
+  line-height: 1.45;
+  font-size: 0.98rem;
+}
+
+.avis-stars i {
+  margin-left: 1px;
+}
+
+
+.avis-nav {
+  border-radius: 999px;
+}
+
+
+.avis-indicators button {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+
+
+
+
+.vip-card{
+  background: rgba(0,0,0,0.25);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 18px;
+  padding: 22px 18px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+  color:#fff;
+}
+
+.vip-pill{
+  display:inline-block;
+  margin-left:8px;
+  padding:2px 10px;
+  border-radius:999px;
+  font-size:.78rem;
+  border:1px solid rgba(255,255,255,0.12);
+  color:rgba(255,255,255,0.85);
+}
+
+.vip-meta{ font-size:.95rem; color:rgba(255,255,255,0.9); }
+
+.vip-player{
+  display:flex;
+  gap:14px;
+  align-items:center;
+  flex-wrap:wrap;
+}
+
+.vip-btn{
+  border-radius:999px;
+  padding:10px 16px;
+  white-space:nowrap;
+}
+
+.vip-progress-wrap{ flex:1; min-width:240px; }
+
+.vip-progress{ width:100%; accent-color:#ffcc00; }
+
+.vip-volume input[type="range"]{ width:110px; accent-color:#ffcc00; }
+
+.vip-open{
+  border-radius: 999px;
+}
+
+.vip-note{
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 16px;
+  padding: 12px 14px;
+}
+
+.vip-tag{ color:#ffcc00; font-weight:800; }
+
+.vip-tagline{ color:rgba(255,255,255,0.9); }
+
+.vip-error{
+  background: rgba(255, 61, 61, 0.12);
+  border: 1px solid rgba(255, 61, 61, 0.25);
+  color: rgba(255,255,255,0.95);
+  border-radius: 12px;
+  padding: 10px 12px;
+  margin-bottom: 14px;
 }

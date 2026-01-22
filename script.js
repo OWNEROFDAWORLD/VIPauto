@@ -48,3 +48,32 @@ if (document.readyState === 'loading') {
 } else {
     initFormHandler();
 }
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const carouselEl = document.getElementById("avisCarousel");
+  if (!carouselEl) return;
+
+  let startX = 0;
+  let endX = 0;
+
+  carouselEl.addEventListener("touchstart", (e) => {
+    startX = e.changedTouches[0].screenX;
+  }, { passive: true });
+
+  carouselEl.addEventListener("touchend", (e) => {
+    endX = e.changedTouches[0].screenX;
+    const diff = endX - startX;
+
+    // seuil
+    if (Math.abs(diff) < 40) return;
+
+    const carousel = bootstrap.Carousel.getOrCreateInstance(carouselEl);
+    if (diff < 0) carousel.next();
+    else carousel.prev();
+  }, { passive: true });
+});
+
+
+
+ 
